@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<SyncAdapter xmlns:android="http://schemas.android.com/apk/res/android"
+             android:contentAuthority="com.joocy.cloudi.Provider"
+             android:accountType=""
+             android:supportsUploading="true"/>

@@ -5,6 +5,7 @@
     <application android:icon="@drawable/icon" android:label="@string/app_name">
         <provider android:name="com.joocy.cloudi.Provider"
                   android:authorities="com.joocy.cloudi.Provider"/>
+
         <service android:name=".cloudi.SyncService"
                  android:exported="true">
             <intent-filter>
@@ -12,6 +13,14 @@
             </intent-filter>
             <meta-data android:name="android.content.SyncAdapter"
                        android:resource="@xml/sync"/>
+        </service>
+
+        <service android:name=".cloudi.AuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                       android:resource="@xml/authenticator"/>
         </service>
     </application>
 </manifest>
